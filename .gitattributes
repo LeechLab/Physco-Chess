@@ -1,1 +1,2 @@
 physco[[:space:]]chess.wasm filter=lfs diff=lfs merge=lfs -text
+*physco[[:space:]]chess.wasm filter=lfs diff=lfs merge=lfs -text
