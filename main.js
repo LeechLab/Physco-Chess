@@ -114,5 +114,5 @@ function play() {
     data:localStorage.getItem("PhyscoChess-Data")
   };
 
-  document.getElementById("game").contentWindow.postMessage(message, "*");
+  document.getElementById("game").contentWindow.postMessage(message);
 }
