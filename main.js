@@ -110,5 +110,9 @@ function play() {
   document.getElementById("game").className = "Show";
 }
 document.getElementById("game").addEventListener("load", () => {
-  document.getElementById("game").contentWindow.postMessage(localStorage.getItem("PhyscoChess-Data"));
+  const dataSEND = localStorage.getItem("PhyscoChess-Data");
+  document.getElementById("game").contentWindow.postMessage({
+    type: "gameData",
+    data: dataSEND
+  }, "*");
 });
