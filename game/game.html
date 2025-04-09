@@ -225,5 +225,18 @@
         }
       })();
     </script>
+    <script>
+      window.addEventListener("message", (event) => {
+        if (event.data?.type === "gameData") {
+          const data = event.data.data;
+          if (typeof Engine !== "undefined") {
+            const godot = Engine.get_main_loop();
+            if (godot && godot.set) {
+              godot.set("gameData", data);
+            }
+          }
+        }
+      });
+</script>
   </body>
 </html>
