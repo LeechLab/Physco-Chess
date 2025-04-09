@@ -110,7 +110,7 @@ function play() {
     "https://leechlab.github.io/Physco-Chess/game/game.html";
   document.getElementById("game").className = "Show";
   const message = {
-    type: "gameData",
+    type: "username",
     data:localStorage.getItem("PhyscoChess-Data");
   };
 
