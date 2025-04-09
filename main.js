@@ -109,5 +109,5 @@ function play() {
   document.getElementById("game").src =
     "https://leechlab.github.io/Physco-Chess/game/game.html";
   document.getElementById("game").className = "Show";
-  document.getElementById("game").contentWindow.postMessage(localStorage.getItem("PhyscoChess-Data"),*);
+  document.getElementById("game").contentWindow.postMessage(localStorage.getItem("PhyscoChess-Data"));
 }
