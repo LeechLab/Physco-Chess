@@ -105,9 +105,6 @@
 
     <script src="game.js"></script>
     <script>
-      window.addEventListener("message", (event) => {
-        godot.set("username", event.data);
-      });
       const GODOT_CONFIG = {
         args: [],
         canvasResizePolicy: 2,
@@ -227,6 +224,17 @@
             }, displayFailureNotice);
         }
       })();
+      window.addEventListener("message", (event) => {
+      if (event.data?.type === "gameData") {
+        const data = event.data.data;
+        if (typeof Engine !== "undefined") {
+          const godot = Engine.get_main_loop();
+          if (godot && godot.set) {
+            godot.set("game_data", data);
+          }
+        }
+      }
+      });
     </script>
   </body>
 </html>
