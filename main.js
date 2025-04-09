@@ -111,7 +111,7 @@ function play() {
   document.getElementById("game").className = "Show";
   const message = {
     type: "gameData",
-    data:getData("Theme");
+    data:localStorage.getItem("PhyscoChess-Data");
   };
 
   document.getElementById("game").contentWindow.postMessage(message, "*");
